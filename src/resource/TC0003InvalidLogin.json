@@ -1,0 +1,32 @@
+[
+    {
+        "email": "invalidemail@gmail.com",
+        "password": "Testing@123",
+        "errorMessage": "email or password is invalid"
+    },
+    {
+        "email": "invalidemail@gmail.com",
+        "password": "Testing@123",
+        "errorMessage": "email or password is invalid"
+    },
+    {
+        "email": "",
+        "password": "Testing@123",
+        "errorMessage": "email can't be blank"
+    },
+    {
+        "email": "automation1@yopmail.com",
+        "password": "123456",
+        "errorMessage": "email or password is invalid"
+    },
+    {
+        "email": "automation1@yopmail.com",
+        "password": "",
+        "errorMessage": "password can't be blank"
+    },
+    {
+        "email": "",
+        "password": "",
+        "errorMessage": "email can't be blank"
+    }
+]
