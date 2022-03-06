@@ -43,6 +43,9 @@ describe(SuiteNames.endToEndTestSuite, () => {
     await CommonPageHelper.clickOnSignInButton(stepLogger);
     stepLogger.verification("Verify that Home page is displayed");
     await HomePageHelper.verifyHomePage(stepLogger);
+
+    stepLogger.postCondition('Logout');
+    await HomePageHelper.logOut(stepLogger);
   });
 
   it("TC10002 - Verify that a user log in successfully with username and password already signed up", async () => {
@@ -63,6 +66,9 @@ describe(SuiteNames.endToEndTestSuite, () => {
     await CommonPageHelper.clickOnSignInButton(stepLogger);
     stepLogger.verification("Verify that Home page is displayed");
     await HomePageHelper.verifyHomePage(stepLogger);
+
+    stepLogger.postCondition('Logout');
+    await HomePageHelper.logOut(stepLogger);
   });
 
   invalidLoginData.forEach((data: { email: string; password: string; errorMessage: string }, index: number) => {

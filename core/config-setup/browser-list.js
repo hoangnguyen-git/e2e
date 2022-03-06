@@ -1,26 +1,37 @@
 module.exports = {
   chrome: {
     browserName: 'Chrome',
+    browser_version: 'latest',
     os: 'Windows',
     os_version: '10',
     resolution: '1280x1024',
   },
   chromeMac: {
     browserName: 'Chrome',
+    browser_version: 'latest',
     os: 'OS X',
-    os_version: 'Sierra',
+    os_version: 'Big Sur',
     resolution: '1280x1024',
   },
   firefox: {
     browserName: 'Firefox',
+    browser_version: 'latest',
     os: 'Windows',
     os_version: '10',
     resolution: '1280x1024',
   },
   firefoxMac: {
     browserName: 'Firefox',
+    browser_version: 'latest',
     os: 'OS X',
-    os_version: 'Sierra',
+    os_version: 'Big Sur',
+    resolution: '1280x1024',
+  },
+  firefoxMac80: {
+    browserName: 'Firefox',
+    browser_version: 80,
+    os: 'OS X',
+    os_version: 'Big Sur',
     resolution: '1280x1024',
   },
   ie: {

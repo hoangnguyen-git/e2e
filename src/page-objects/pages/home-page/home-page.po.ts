@@ -17,4 +17,12 @@ export class HomePage {
   static get userIcon() {
     return element(By.className("user-pic"));
   }
+
+  static get setting() {
+    return element(By.partialLinkText("Settings"));
+  }
+
+  static get logOut() {
+    return element(By.className("btn-outline-danger"));
+  }
 }

@@ -74,17 +74,49 @@ We must post fix `.e2e-spec.ts` for all the test files
 We have a Dockerfile created in root of the repo for test execution in interactive mode and usage VNC for debugging as well.
 
 
-
 ## Running end-to-end tests
-Run `npm install` to install libraries, dependencies
+Install libraries, dependencies
+```
+npm install
+```
 
-Run `npm run e2e` to execute the end-to-end tests via [Protractor] on local(http://www.protractortest.org/).
-    - Default is Chrome
-    - Run in headless mode of Chrome `npm run e2e -- --params.headlessBrowser='true'`
-    - Run with Firefox: `npm run e2e -- --params.local.browser='firefox'`
+Execute the end-to-end tests via [Protractor] on local(http://www.protractortest.org/). Default is Chrome
+```
+npm run e2e
+```
+Run in headless mode of Chrome on local
+```
+npm run e2e -- --params.headlessBrowser='true'
+```
+Run with Firefox on local
+```
+npm run e2e -- --params.local.browser='firefox'
+```
 
-Run `npm run e2e-selenium` to execute the end-to-end tests via [Protractor] with Selenium Grid
-Run `npm run e2e-bs` to execute the end-to-end tests via [Protractor] on Browser Stack
+Execute the end-to-end tests via [Protractor] with Selenium Grid
+```
+npm run e2e-selenium
+```
+
+Execute the end-to-end tests via [Protractor] on Browser Stack. Default is Chrome with latest version
+```
+npm run e2e-bs
+```
+Note here the list browser available in `browser-list.js` (https://github.com/hoangnguyen-git/e2e/blob/main/core/config-setup/browser-list.js). You can define more depend on the need
+If you want to run with different browser, browser version, OS. You can define and pass it to the param in run command
+Example to run with Firefox 80 on MacOS
+```
+  firefoxMac80: {
+    browserName: 'Firefox',
+    browser_version: 80,
+    os: 'OS X',
+    os_version: 'Big Sur',
+    resolution: '1280x1024',
+  }
+```
+```
+npm run e2e-bs -- --params.browserstack.browser='firefoxMac80'
+```
 
 ## Customization switches
 
@@ -159,7 +191,7 @@ allure serve auto-generated/allure-results
 
 ## Running parallel tests execution
 
-Following keys are defined in [default-config-setup.js]
+Following keys are defined in [default-config-setup.js] (https://github.com/hoangnguyen-git/e2e/blob/main/core/config-setup/default-config-setup.js)
 
 multiCapabilities.maxInstances: 5  Default max instances for selenium grid
 

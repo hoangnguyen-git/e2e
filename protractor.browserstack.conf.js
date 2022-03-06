@@ -25,7 +25,7 @@ exports.config = {
     return new Promise(function (resolve, reject) {
       exports.bs_local = new browserstack.Local();
       exports.bs_local.start(
-        { key: defaultConfigSetup.bsMultiCapabilities["browserstack.key"] },
+        { key: defaultConfigSetup.bsMultiCapabilities[0]["browserstack.key"] },
         function (error) {
           if (error) return reject(error);
           console.log("Connected. Now testing...");
